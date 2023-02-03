@@ -1,10 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import 'bootstrap/dist/css/bootstrap.css'
-import './style.css';
-import App from './App.js';
-// const header =  <h1>This is my first REACT APP</h1>;
-// ReactDom.render(header,document.getElementById("root")); 
+import App from './app';
+import 'bootstrap/dist/css/bootstrap.css';
+import './index.css';
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<App />);  
+//const header = <h1>This is my first React App</h1>;
+
+//console.log(header);
+
+//ReactDOM.render(header, document.getElementById('root'))
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<App />);
+
+// let div = document.getElementById('root');
+// div.append(App());

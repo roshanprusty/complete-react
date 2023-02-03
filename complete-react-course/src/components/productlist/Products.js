@@ -1,25 +1,3 @@
-// import ProductDetails from "./ProductDetails";
-
-
-// // let imgUrl = ('https://whytefarms.com/trialoffer/wp-content/uploads/2021/05/milk-glass-bottle-1-scaled-e1642281161529.jpg');
-
-// // let isAvailable = "Available"
-// // let badgeClass = "badge-margin-left-40 badge "
-// // badgeClass += isAvailable === "Available" ? "bg-success" : "bg-danger";
-
-// function Products(props) {
-//     return (<li class="list-group-item">
-//             <div class="media align-items-lg-center flex-column flex-lg-row p-3 d-flex"> <div class="media-body order-2 order-1g-1">
-//                 <h5 class="mt-0 font-weight-bold mb-2">{props.name}</h5> <p class="font-italic text-muted mb-0 small">{props.description}</p>
-//                 <ProductDetails price={props.price} isAvailable={props.isAvailable}>
-//                     {/* <p>This is just a demo</p> */}
-//                 </ProductDetails>
-//             </div><img src={props.image} alt="Generic placeholder image" width="200" class="ml-lg-5 order-1 order-1g-2"/></div>
-//         </li>
-//     );
-// };
-// export default Products;
-
 import React from 'react';
 import ProductDetails from './ProductDetails';
 
