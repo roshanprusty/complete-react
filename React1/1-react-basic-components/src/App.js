@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
 
 import './app.css';
-import CreateProduct from './Components/CreateProduct/CreateProduct';
-import ProductList from './Components/ProductList/ProductList';
-import FilterProduct from './Components/FilterProduct/FilterProduct';
+import CreateProduct from './components/CreateProduct/CreateProduct';
+import ProductList from './components/Productlist/ProductList';
+import FilterProduct from './components/FilterProduct/FilterProduct.js';
 
 const products = [
     {
