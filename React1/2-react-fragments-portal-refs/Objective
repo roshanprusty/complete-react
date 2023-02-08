@@ -1,7 +1,13 @@
 fragments ~ It is represented by the <React.Fragment> tag and can be used to improve the readability of your component's render method by avoiding unnecessary divs. Fragments allow you to return multiple elements from a component's render method without having to wrap them in a containing element.
 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 React-portal ~ A "Portal" in React is a way to render a component outside of its parent component's DOM tree, at a different DOM node. Portals provide a way to escape the DOM hierarchy for cases when a parent component has styles that negatively affect a child element. Portals are created using the ReactDOM.createPortal method, which takes two arguments: the first is the component to be rendered, and the second is the DOM node that the component should be rendered into.
 
 why we do need them?
 https://youtu.be/VaMTTyB-Zqg?list=PL1BztTYDF-QMPh8UW3xxk8C6uk2WVfUS3&t=897
 we need them one of the use cases where the portals are required is having to deal with the parent component css when the child component is a model a pop-up or a tool tip
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+useRef: useRef is used to create a reference to the input field.
