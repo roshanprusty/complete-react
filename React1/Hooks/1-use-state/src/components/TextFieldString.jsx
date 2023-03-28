@@ -4,13 +4,13 @@ function TextFieldString() {
     const [text, setText] = useState('hello');
 
     function handleChange(e) {
-        setText(e.target.value);
+        setText(e.target.value); //*
     }
 
     return (
         <div className="TF">
             <h2>TEXT FIELD STRING</h2>
-            <input onChange={handleChange} />
+            <input onChange={handleChange} /> //*
             <p>You typed: {text}</p>
             <button onClick={() => setText('hello')}>
                 Reset

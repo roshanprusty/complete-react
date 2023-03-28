@@ -1,18 +1,18 @@
-// import Counter from "./components/Counter";
 import './App.css';
 import Temp from './components/Temp';
-// import TextFieldString from "./components/TextFieldString";
-// import CheckBoxBoolean from "./components/CheckBoxBoolean";
-// import Form from "./components/Form";
-// import FormObject from "./components/FormObject";
+import Counter from "./components/Counter";
+import TextFieldString from "./components/TextFieldString";
+import CheckBoxBoolean from "./components/CheckBoxBoolean";
+import Form from "./components/Form";
+import FormObject from "./components/FormObject";
 function App(){
   return(<>
-  {/* <Counter/> 
+  <Counter/> 
   <TextFieldString /> 
   <CheckBoxBoolean />
   <Form />
-  <FormObject /> */}
-  <Temp />
+  <FormObject />
+  {/* <Temp /> */}
   </>)
 }
 export default App;
