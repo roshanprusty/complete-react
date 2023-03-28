@@ -2,7 +2,7 @@ import { useState } from "react";
 import './Counter.css'
 
 function Counter(){
-    let[count, setcount] = useState(0);
+    let[count, setcount] = useState(0); //
     let countValue=true;
     function inc(){
         setcount(count+1);
