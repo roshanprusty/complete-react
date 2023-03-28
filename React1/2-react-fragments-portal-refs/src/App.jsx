@@ -7,8 +7,8 @@ import RefsDemo from './Components/RefsDemo'
 function App() {
   return (
     <>
-      {/* <Component1 /> */}
-      <RefsDemo />
+      <Component1 />
+      {/* <RefsDemo /> */}
     </>
   )
 }
