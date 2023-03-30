@@ -4,7 +4,7 @@ import "./CheckBoxBoolean.css";
 function CheckBoxBollean() {
     let [liked, setliked] = useState(true);
     function handleChange(e) {
-        setliked(e.target.checked);
+        setliked(e.target.checked); //*
     }
     return (<div className="cb">
         <h2>Checkbox Boolean</h2>

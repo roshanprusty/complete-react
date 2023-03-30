@@ -16,8 +16,6 @@ function Counter(){
         <button onClick={inc}>INCREMENT</button> //*
         <p>{count}</p>
         <button onClick={dec} disabled={countValue}>DECREMENT</button>
-
-
     </div>)
 }
 export default Counter;
