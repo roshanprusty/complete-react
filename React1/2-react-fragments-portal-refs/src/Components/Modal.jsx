@@ -15,3 +15,4 @@ function Modal(props) {
     </>, document.getElementById("root-portal"));
 }
 export default Modal;
+
