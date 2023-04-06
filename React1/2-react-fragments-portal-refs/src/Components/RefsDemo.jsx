@@ -1,9 +1,9 @@
 import { useRef } from "react";
 
 function RefsDemo(){
-    let nameInputRef = useRef();
+    let nameInputRef = useRef("Please specify your name");
     function showNameEventHandler(){
-        console.log(nameInputRef.current.value);
+        console.log(nameInputRef.current.value  );
     }
     return(<>
     <span>Name:</span>
