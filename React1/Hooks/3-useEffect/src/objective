@@ -1,0 +1,17 @@
+useEffect:- useEffect is something which helps us to perform side effects in our react application
+
+Now what is side effect?
+Side effect is something which gives unpredictable output / result or actions which are performed by the outside world.
+
+Some common example of side effect are –
+making an API request
+unpredictable async functions call , etc.
+
+1. useEffect(() => {});  
+it will run after every render. 
+
+2. useEffect(() => {}, []);
+it will run once after the component has rendered the first time. 
+
+3. useEffect(() => {}, [value1 , value2]);
+it will only run when the value inside array will update
