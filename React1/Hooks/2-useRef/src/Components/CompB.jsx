@@ -10,9 +10,13 @@ function CompB(){
         // console.log(inputRef.current.placeholder); //type your name here!!!
         inputRef.current.focus();
         // inputRef.current.style.backgroundColor="yellow"; //you can add more functionality too.
+        inputRef.current.classList.add("green"); //can update too
+        inputRef.current.classList.remove("red");
+        console.log(inputRef.current.value);
+        inputRef.current.value="roshan";
     }
     return(<>
-    <input type="text" placeholder="type your name here!!!" ref={inputRef} className="Red"/>
+    <input type="text" placeholder="type your name here!!!" ref={inputRef} value={"arun"} className="Red"/>
     <button onClick={clickMe}>Click Me</button>
     </>)
 }
