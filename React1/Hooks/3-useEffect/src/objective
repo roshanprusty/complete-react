@@ -15,3 +15,7 @@ it will run once after the component has rendered the first time.
 
 3. useEffect(() => {}, [value1 , value2]);
 it will only run when the value inside array will update
+
+
+***************************************************************************************************************************************
+component unmount

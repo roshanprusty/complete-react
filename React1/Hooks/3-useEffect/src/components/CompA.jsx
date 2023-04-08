@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 function CompA(){
     let[counter, setCounterValue]=useState(0);
     let[counter2, setCounterValue2]=useState(0);
+
     // function mounted(){ console.log("component mounted")}
     // mounted();
     

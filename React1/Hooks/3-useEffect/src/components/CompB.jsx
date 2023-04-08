@@ -1,0 +1,22 @@
+import { useEffect, useState } from "react";
+
+function CompB() {
+    const [data1, setData] = useState();
+    async function getUserData() {
+        let data = await fetch("https://api.github.com/users");
+        let response = await data.json();
+        console.log("response", response);
+        setData(response);
+    }
+    useEffect(() => {
+        console.log("componet did updated");
+        getUserData();
+    },[]); 
+    return (<>
+        <h2>CompB</h2>
+        {data1?.map((each, index) => (
+            <p key={index}>{each.login}</p>
+        ))}
+    </>)
+}
+export default CompB;
