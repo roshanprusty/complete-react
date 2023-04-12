@@ -19,4 +19,4 @@ function CompB() {
         ))}
     </>)
 }
-export default CompB;
+export default CompB; 
