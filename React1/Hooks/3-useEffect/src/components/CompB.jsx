@@ -9,7 +9,7 @@ function CompB() {
         setData(response);
     }
     useEffect(() => {
-        console.log("componet did updated");
+        console.log("component did updated");
         getUserData();
     },[]); 
     return (<>
