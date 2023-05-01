@@ -1,5 +1,5 @@
 import './Table.css'
-function Table() {
+function Que1() {
     const data = [
         { name: "Anom", age: 19, gender: "Male" },
         { name: "Megha", age: 19, gender: "Female" },
@@ -26,4 +26,4 @@ function Table() {
     </div>
     </>)
 }
-export default Table;
+export default Que1;
