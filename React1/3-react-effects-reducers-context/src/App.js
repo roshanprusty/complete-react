@@ -7,14 +7,15 @@ import Demo from './components/ReducerDemo/Demo';
 import AuthContext from './components/Context/AuthContext';
 
 function App() {
-  let ctx = useContext(AuthContext)
+  // let ctx = useContext(AuthContext)
   return (
       <>
-        <MainHeader />
+        {/* <MainHeader />
         <main>
           {!ctx.isLoggedIn && <Login />}
           {ctx.isLoggedIn && <Home />}
-        </main>
+        </main> */}
+        <Demo />
       </>
   );
 }

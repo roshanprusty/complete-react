@@ -4,7 +4,7 @@ function TextFieldString() {
     const [text, setText] = useState('hello');
 
     function handleChange(e) {
-        setText(e.target.value); //*
+        setText(e.target.value); 
     }
 
     return (
