@@ -1,0 +1,50 @@
+virtual DOM and Real DOM
+ whenever something changes in a react component let's say whenever the state props or context of a component changes it re-evaluates the component function and when the component function is re-evaluated if there is any change in that case the virtual dom will be re-rendered after that the react term will compare this virtual dom with the real dom and if it find any difference in that case in the real dom only that part will be rendered where there is a difference. 
+ 
+ suppose you have counter component and there you have two button one increment another one decrement. while changing the value span element gets change. 
+
+ You can see live too. By going to browser --> inspect --> element 
+ here any button gets click span element will flashed then value will get change.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+passing value from one component to another
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+React memo --> changing value || same value
+Basically React.memo is a higher-order component (HOC) that is used to optimize the rendering performance of React functional components by memoizing them. In other words, React.memo is used to prevent unnecessary re-renders of a component when its props have not changed.
+
+When a component is wrapped with React.memo, React will automatically check if the component's props have changed since the last render. If the props have not changed, React will reuse the previous result of the component's render method, instead of calling it again. This can significantly improve the performance of your React app, especially when dealing with large or complex components.
+
+In simple terms it will just check whether the props is changing or not if does not change it will not render.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Que:- While `React.memo` can be a powerful tool for optimizing the rendering performance of      React functional components, it's not always necessary or appropriate to use it on every component. There are a few reasons why you may not want to use `React.memo` in every component:
+
+1. Small or simple components may not benefit from memoization: For very small or simple components, the cost of checking if the props have changed may outweigh the benefits of memoization. In these cases, it may be better to simply rely on React's default rendering behavior.
+
+2. Components with frequently changing props may not benefit from memoization: If a component's props are frequently changing, it may not be worth memoizing the component, since React will need to re-render it anyway.
+
+3. Components that depend on external state may not benefit from memoization: If a component depends on external state that may change independently of its props (e.g. state managed by a parent component or a Redux store), memoizing the component may not provide any benefits.
+
+4. Memoization adds complexity: While `React.memo` is a simple and straightforward feature, it does add a bit of complexity to your code. Memoized components can behave differently than non-memoized components in certain edge cases, so you'll need to be aware of these differences when using memoization.
+
+In general, it's best to use `React.memo` judiciously and selectively, based on the specific needs and characteristics of each component. You should also make sure to benchmark and test the performance of your app with and without memoization to ensure that it's actually providing a benefit.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+whenever we pass array in props why it showing span executed although we have use React.memo?
+When you pass an array as a prop to a component, React will check for changes in the reference of the array, not just changes in its values. So even if the values in the array have not changed, if the reference to the array has changed (e.g. because the array was created again), React will consider it as a prop change and re-render the component.
+After creation of new array the adress of array got changed that's why it showing span exexuted.
+
+To avoid this we can use useMemo()
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+whenever we pass function in props why it show span executed although we have use React.memo?
+same function is also a reference type
+
+To avoid this we can use useCallback()
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+useCallback() --> dependencies
+
+useMemo() --> dependencies
