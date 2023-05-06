@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function Que8(){
+function Form(){
   let[name,setName]=useState("");
   let[age,setAge]=useState(0);
   let[city,setCity]=useState("");
@@ -19,4 +19,4 @@ function Que8(){
   <button onClick={done}>Submit</button>
   </>)
 }
-export default Que8;
+export default Form;
