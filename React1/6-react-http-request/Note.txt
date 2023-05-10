@@ -1,0 +1,31 @@
+Remember that never write code in react or in js to connect browser to database.
+
+Question might be arrise if we will not write code to connect client side to database. Then How will everything will work --> Answer of this Question through help of backend we can do this. Backend code will be in different server and user can't see the code of backend. Your react application will talk to the backend application who compose of different api to talk to the database. In this way you have safe connection to database.
+
+We will be using FIREBASE we will be not writing any backend code as it can go out of react course
+
+FIREBASE: Firebase is a mobile and web application development platform provided by Google. It offers a comprehensive set of tools and services that help developers build, deploy, and manage applications quickly and easily. Here are some key features and components of Firebase:
+
+1. Real-time Database: Firebase provides a NoSQL cloud-hosted database that enables real-time synchronization and data storage. It allows developers to build applications with real-time collaboration and updates.
+
+2. Authentication: Firebase offers a built-in authentication system that allows developers to easily add user authentication and authorization to their applications. It supports various authentication providers like email/password, social media logins, and more.
+
+3. Cloud Firestore: Firestore is a flexible and scalable NoSQL document database provided by Firebase. It offers powerful querying capabilities, offline support, real-time updates, and seamless integration with other Firebase services.
+
+4. Cloud Functions: Firebase Cloud Functions allows developers to write and deploy serverless functions that automatically respond to events and triggers within their Firebase projects. It enables developers to add custom server-side logic to their applications.
+
+5. Hosting: Firebase Hosting provides a simple and secure way to deploy web applications and static content. It offers fast content delivery through a global CDN (Content Delivery Network) and supports custom domains.
+
+6. Cloud Storage: Firebase Storage offers cloud storage for user-generated content like images, videos, and files. It provides an easy-to-use API for uploading, downloading, and managing files securely.
+
+7. Analytics: Firebase Analytics helps developers understand user behavior and app usage. It provides insights into app performance, user engagement, and conversion tracking. It also integrates with other Firebase services for deeper analysis.
+
+8. Cloud Messaging: Firebase Cloud Messaging enables sending push notifications to mobile and web applications. It allows developers to engage with users by sending targeted messages and notifications.
+
+9. Remote Config: Remote Config allows developers to remotely manage and update application configurations and parameters without requiring app updates. It helps in A/B testing, feature flagging, and dynamically adjusting app behavior.
+
+10. Test Lab: Firebase Test Lab provides a cloud-based infrastructure for testing mobile applications. It allows developers to run automated tests on real devices to ensure app quality and compatibility.
+
+Firebase offers many more features like in-app messaging, dynamic links, performance monitoring, and crash reporting, making it a comprehensive platform for building and managing applications. It is widely used for rapid prototyping, building MVPs, and scaling applications, providing developers with a robust and scalable backend infrastructure.
+
+In short --> Remember Firebase is not a database it is complete backend solution that also offers a database.
