@@ -28,4 +28,4 @@ FIREBASE: Firebase is a mobile and web application development platform provided
 
 Firebase offers many more features like in-app messaging, dynamic links, performance monitoring, and crash reporting, making it a comprehensive platform for building and managing applications. It is widely used for rapid prototyping, building MVPs, and scaling applications, providing developers with a robust and scalable backend infrastructure.
 
-In short --> Remember Firebase is not a database it is complete backend solution that also offers a database.
+In short --> Remember Firebase is not a database it is complete backend solution that also offers a database. 
