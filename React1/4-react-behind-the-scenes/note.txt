@@ -1,4 +1,4 @@
-virtual DOM and Real DOM
+ virtual DOM and Real DOM
  whenever something changes in a react component let's say whenever the state props or context of a component changes it re-evaluates the component function and when the component function is re-evaluated if there is any change in that case the virtual dom will be re-rendered after that the react term will compare this virtual dom with the real dom and if it find any difference in that case in the real dom only that part will be rendered where there is a difference. 
  
  suppose you have counter component and there you have two button one increment another one decrement. while changing the value span element gets change. 
