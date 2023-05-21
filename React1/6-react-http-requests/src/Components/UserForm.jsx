@@ -1,5 +1,6 @@
 import './UserForm.css';
 import { useRef } from 'react';
+
 function UserForm(props){
     let fnameRef = useRef();
     let lnameRef = useRef();
@@ -20,7 +21,8 @@ function UserForm(props){
             city: cityRef.current.value,
             dob: dateRef.current.value 
         }
-        console.warn(user);
+        // eslint-disable-next-line react/prop-types
+        props.onCreateUser(user);
     }
 
     return <>
