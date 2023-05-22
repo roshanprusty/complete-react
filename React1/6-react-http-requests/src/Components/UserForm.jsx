@@ -9,6 +9,7 @@ function UserForm(props){
     let countryRef = useRef();
     let cityRef = useRef();
     let dateRef = useRef();
+    let genderRef = useRef();
     
     function onCreateUser(event){
         event.preventDefault();
@@ -19,7 +20,8 @@ function UserForm(props){
             password: pswdRef.current.value,
             country: countryRef.current.value,
             city: cityRef.current.value,
-            dob: dateRef.current.value 
+            dob: dateRef.current.value,
+            gender: genderRef.current.value
         }
         // eslint-disable-next-line react/prop-types
         props.onCreateUser(user);
@@ -30,7 +32,7 @@ function UserForm(props){
                     <div className="modal-content">
                         <div className="close" onClick={props.closeForm}>&times;</div>
                         <h3>Create new user</h3>
-                        <div className="user-form">
+                        <div className="user-form ">
                             <form onSubmit={onCreateUser}>
                                 <div>
                                     <input type="text" placeholder="First name" ref={fnameRef}/>
@@ -59,13 +61,13 @@ function UserForm(props){
                                 </div>
                                 <div>
                                     <input type="date" placeholder="Date of Birth" ref={dateRef}/>
-                                    <select name="gender">
+                                    <select name="gender" ref={genderRef}>
                                         <option value="Male">Male</option>
                                         <option value="Female">Female</option>
                                         <option value="Unknown">Unknown</option>
                                     </select>
                                 </div>
-                                <button className='add-user-button'>Create User</button>
+                                <button className='add-user-button' >Create User</button>
                             </form>
                         </div>
                     </div>
