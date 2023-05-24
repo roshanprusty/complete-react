@@ -1,6 +1,9 @@
 import './UserDetails.css';
 
 function UserDetails(props) {
+  function onEditUserClicked(event, user){
+      props.onEditUser(user);
+  }
   return <div className="user-details">
     <table className="users-table">
       <tr>
@@ -21,7 +24,7 @@ function UserDetails(props) {
           <td>{user.country}</td>
           <td>{user.city}</td>
           <td>
-            <button className="btn btn-primary">Edit</button>
+            <button className="btn btn-primary" onClick={() =>{onEditUserClicked(event, user)}}>Edit</button>
             <button className="btn btn-danger">Delete </button>
           </td>
         </tr>
