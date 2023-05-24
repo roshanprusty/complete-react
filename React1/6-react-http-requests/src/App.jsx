@@ -3,9 +3,11 @@ import UserForm from './Components/UserForm';
 import './App.css';
 import UserDetails from './Components/UserDetails';
 import axios from 'axios'
+import Loader from './Components/Loader';
 function App() {
   let [showForm, setShowForm] = useState(false);
   let [users, setUsers] = useState([]);
+  let [loading, setLoading] = useState(false);
   function addUserHandler() {
     setShowForm(true);
   }
@@ -30,30 +32,32 @@ function App() {
       })
   }
   function fetchUser() {
-    fetch("https://react-form-new-6252c-default-rtdb.firebaseio.com/user.json")
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        let userData = [];
-        for (let key in data) {
-          userData.push({ ...data[key], id: key });
-        }
-        // console.log(userData);
-        setUsers(userData);
-      })
-    // axios.get("https://react-form-new-6252c-default-rtdb.firebaseio.com/user.json")
-    // .then((response) => {
-    //   return response.data();
-    // })
-    // .then((data) => {
-    //   let userData = [];
-    //   for (let key in data) {
-    //     userData.push({ ...data[key], id: key });
-    //   }
-    //   // console.log(userData);
-    //   setUsers(userData);
-    // })
+    // fetch("https://react-form-new-6252c-default-rtdb.firebaseio.com/user.json")
+    //   .then((response) => {
+    //     return response.json();
+    //   })
+    //   .then((data) => {
+    //     let userData = [];
+    //     for (let key in data) {
+    //       userData.push({ ...data[key], id: key });
+    //     }
+    //     // console.log(userData);
+    //     setUsers(userData);
+    //   })
+    setLoading(true);
+    axios.get("https://react-form-new-6252c-default-rtdb.firebaseio.com/user.json")
+    .then((response) => {
+      return response.data;
+    })
+    .then((data) => {
+      let userData = [];
+      for (let key in data) {
+        userData.push({ ...data[key], id: key });
+      }
+      // console.log(userData);
+      setUsers(userData);
+      setLoading(false);
+    })
   }
   return (
     <div>
@@ -61,7 +65,8 @@ function App() {
         <button className='btn btn-success mt-5' onClick={addUserHandler}>Add User</button>
         <button className='btn btn-normal mt-5' onClick={fetchUser}>Get Users</button>
       </div>
-      <UserDetails users={users}></UserDetails>
+      {!loading && <UserDetails users={users}></UserDetails>}
+      {loading && <Loader></Loader>}
       {showForm && <UserForm closeForm={closeForm} onCreateUser={onCreateUser}></UserForm>}
     </div>
   );
