@@ -52,7 +52,7 @@ function App() {
           setErrorMessage(err.message);
         })
     }
-    fetchUser();
+    // fetchUser();
     setShowForm(false);
   }
   function fetchUser() {
@@ -105,13 +105,26 @@ function App() {
     setShowForm(true);
     console.log(user);
   }
+  function onDeleteUser(user){
+    let del = window.confirm("Do you really want to delete the record of "+user.firstName+" "+user.lastName);
+    if(del){
+      axios.delete("https://react-form-new-6252c-default-rtdb.firebaseio.com/user/"+user.id+".json")
+      .then((response) =>{
+        console.log(response);
+        fetchUser();
+      })
+      .catch((error)=>{
+        setErrorMessage(error.message);
+      })
+    }
+  }
   return (
     <div>
       <div className='page-header'>
         <button className='btn btn-success mt-5' onClick={addUserHandler}>Add User</button>
         <button className='btn btn-normal mt-5' onClick={fetchUser}>Get Users</button>
       </div>
-      {!loading && !errorMessage && <UserDetails users={users} onEditUser={onEditUser}></UserDetails>}
+      {!loading && !errorMessage && <UserDetails users={users} onEditUser={onEditUser} onDeleteUser={onDeleteUser}></UserDetails>}
       {errorMessage && <h2>{errorMessage}</h2>}
       {loading && <Loader></Loader>}
       {showForm && <UserForm closeForm={closeForm} onCreateUser={onCreateUser} editMode={editMode} user={userToEdit}></UserForm>}

@@ -4,6 +4,9 @@ function UserDetails(props) {
   function onEditUserClicked(event, user){
       props.onEditUser(user);
   }
+  function onDeleteUserClicked(event, user){
+    props.onDeleteUser(user);
+  }
   return <div className="user-details">
     <table className="users-table">
       <tr>
@@ -25,7 +28,7 @@ function UserDetails(props) {
           <td>{user.city}</td>
           <td>
             <button className="btn btn-primary" onClick={() =>{onEditUserClicked(event, user)}}>Edit</button>
-            <button className="btn btn-danger">Delete </button>
+            <button className="btn btn-danger" onClick={(event)=>{onDeleteUserClicked(event,user)}}>Delete </button>
           </td>
         </tr>
       })}

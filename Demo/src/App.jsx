@@ -6,7 +6,7 @@ function App(){
   let lname = useRef();
 
   function AddUsers(){
-    axios.post("https://fir-897b5-default-rtdb.firebaseio.com/")
+    axios.post("https://fir-897b5-default-rtdb.firebaseio.com/", )
   }
   return(<>
     <form>
