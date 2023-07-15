@@ -19,7 +19,7 @@ When a component is wrapped with React.memo, React will automatically check if t
 In simple terms it will just check whether the props is changing or not if does not change it will not render.
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Que:- While `React.memo` can be a powerful tool for optimizing the rendering performance of      React functional components, it's not always necessary or appropriate to use it on every component. There are a few reasons why you may not want to use `React.memo` in every component:
+Que:- While `React.memo` can be a powerful tool for optimizing the rendering performance of React functional components, it's not always necessary or appropriate to use it on every component. There are a few reasons why you may not want to use `React.memo` in every component:
 
 1. Small or simple components may not benefit from memoization: For very small or simple components, the cost of checking if the props have changed may outweigh the benefits of memoization. In these cases, it may be better to simply rely on React's default rendering behavior.
 
