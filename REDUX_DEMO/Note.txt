@@ -1,0 +1,44 @@
+shop - store - A store that holds the state of your application
+
+Intention to BUY_CAKE - action - An action that describes the changes in the state of your application.
+
+Shopkeeper - Reducer - A reducer which actually carries out the state transistion depending on the action
+
+*****************************************************************************************************************
+
+There are three principles
+
+First P: 
+"The state of your whole application is stored in an object tree within a single store"
+
+Maintain our application state in a single object which would be managed by thr redux store.
+
+Cake Shop -
+Let's assume we are tracking the number of cakes on the shelf
+{
+    noOfCakes: 10
+}
+
+
+SecondP: 
+"The only way to change the state is to emit an action , an object describing what happend"
+
+To update the state of your app, you need to let redux know about that what an action.
+
+Not allowed to directly update the state object
+
+Cake Shop -
+Let the Shopkeeper know about our action - BUY_CAKE
+{
+    type: BUY_CAKE
+}
+
+
+ThirdP: 
+"To specify how the state tree is transformed by actions, you write pure reducers"
+
+Reducer - (previousState, action) => newState
+
+Cake Shop -
+Reducer is the Shopkeeper
+
