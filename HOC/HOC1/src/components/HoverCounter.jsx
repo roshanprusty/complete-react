@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import UpdatedComponent from './WithCounter';
 
-
-class ClickCounter extends Component {
+class HoverCounter extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -18,8 +17,8 @@ class ClickCounter extends Component {
 
     render() {
         const { count } = this.state;
-        return <button onClick={this.incrementCount}>{this.props.name} Clicked {count} times</button>;
+        return <button onMouseOver={this.incrementCount}>{this.props.name} Hovered {count} times</button>;
     }
 }
 
-export default UpdatedComponent(ClickCounter);
+export default UpdatedComponent(HoverCounter);
